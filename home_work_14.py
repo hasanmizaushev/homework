@@ -1,8 +1,11 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df1 = pd.read_csv('hw14_data1.csv')
 df2 = pd.read_csv('hw14_data2.csv')
 df3 = pd.read_csv('hw14_data3.csv')
+
+print(df1.head())
 
 
 def our_prediction(a, x, b, y, c, z):
@@ -50,6 +53,8 @@ def function_abc(df, a, b, c):
         a_list.append(a)
         b_list.append(b)
         c_list.append(c)
+    plt.plot(c_list)
+    plt.savefig("image.jpg")
     return a, b, c
 
 
