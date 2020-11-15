@@ -46,12 +46,16 @@ y = np.array(df['F'])
 
 
 def gradient_descent(f, X, y, lr=0.00001):
+    a4_list = []
     koefs = [1] * X.shape[1]
     for i in range(X.shape[0]):
         derivatives = d_error(f, koefs, X[i, :], y[i])
         for j in range(len(koefs)):
             koefs[j] -= lr * derivatives[j]
+            a4_list.append(koefs[:][3])
         # print(koefs)
+    plt.plot(range(len(a4_list)), a4_list)
+    plt.savefig('a4_graf.png')
     return koefs
 
 
