@@ -16,7 +16,7 @@ def f2(x):
 def derivative(f, x1):
     y1 = f(x1)
     y2 = f(x1 + 0.0001)
-    return y2 - y1 / 0.0001
+    return (y2 - y1) / 0.0001
 
 
 def list_xs(f):
