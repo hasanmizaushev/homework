@@ -32,16 +32,17 @@ print(standard_deviation(list_y_pred))
 
 TP = 0
 FP = 0
-for i, j in zip(list_y_pred, list_y_true):
-    if i == j:
-        TP += 1
-    else:
-        FP += 1
-# print(TP, FP)
-# так ка в нашей таблице нет отрицательных значений то наш TN = 0
 TN = 0
-# так ка в нашей таблице нет отрицательных значений то наш FN = 0
 FN = 0
+for i, j in zip(list_y_pred, list_y_true):
+    if i == j == 0:
+        TN += 1
+    elif i == j == 1:
+        TP += 1
+    elif i == 1 and j == 0:
+        FP += 1
+    else:
+        FN += 1
 
 
 def precision(tp, fp):
