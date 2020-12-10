@@ -30,5 +30,9 @@ def data_recall():
     print(recall(TP_r, FN_r))
 
 
+def our_own_formula(precision, recall):
+    return min(precision, recall)
+
+
 data_recall()
 data_precision()
