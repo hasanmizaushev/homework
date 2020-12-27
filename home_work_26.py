@@ -65,6 +65,7 @@ for i in create_one_positive_prediction_data_set():
 
 
 # data set (negative_data_set):
+# The more accurate the result, the smaller the error
 list_pred_1 = []
 list_true_1 = []
 for _, row in negative_data_set.iterrows():
@@ -73,6 +74,7 @@ for _, row in negative_data_set.iterrows():
 print(total_error(list_pred_1, list_true_1))
 
 # data set (ideal_dataset):
+# The error is negative, but very close to zero
 list_pred_2 = []
 list_true_2 = []
 for _, row in ideal_dataset.iterrows():
@@ -81,6 +83,7 @@ for _, row in ideal_dataset.iterrows():
 print(total_error(list_pred_2, list_true_2))
 
 # data set (positive_dataset):
+# The error is huge
 list_pred_3 = []
 list_true_3 = []
 for _, row in positive_dataset.iterrows():
@@ -89,6 +92,7 @@ for _, row in positive_dataset.iterrows():
 print(total_error(list_pred_3, list_true_3))
 
 # data set (one_positive_dataset):
+# The error is less than the last one, but still big
 list_pred_4 = []
 list_true_4 = []
 for _, row in one_positive_dataset.iterrows():
